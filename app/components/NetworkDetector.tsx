@@ -7,18 +7,22 @@ export default function NetworkDetector() {
   useEffect(() => {
     const checkConnection = async () => {
       try {
-        const response = await fetch('https://www.bing.com', { mode: 'no-cors' });
+        await fetch('https://www.bing.com', { mode: 'no-cors' });
         setIsOnline(true);
-      } catch (error) {
+      } catch (_error) {
         setIsOnline(false);
       }
     };
-
     checkConnection();
-    const interval = setInterval(checkConnection, 10000); // Check every 10 seconds
-
-    return () => clearInterval(interval);
   }, []);
+
+  if (!isOnline) {
+    return (
+      <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-2 rounded mb-4">
+        Safe: You are offline. It&apos;s safe to convert your mnemonic.
+      </div>
+    );
+  }
 
   if (!isOnline) {
     return (

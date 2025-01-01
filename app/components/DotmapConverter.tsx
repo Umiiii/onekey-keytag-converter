@@ -64,6 +64,7 @@ export default function DotmapConverter() {
           const result = calculateWord(wordDots);
           return (
             <div key={wordIndex} className="flex items-center gap-4">
+              <div className="w-6 text-right">{wordIndex + 1}</div>
               <div className="flex items-center gap-1">
                 {[0, 1, 2].map((group) => (
                   <div key={group} className="flex gap-1">
