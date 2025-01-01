@@ -28,7 +28,7 @@ export default function NetworkDetector() {
   if (!isOnline) {
     return (
       <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-2 rounded mb-4">
-        Safe: You are offline. It's safe to convert your mnemonic.
+        Safe: You are offline. It&apos;s safe to convert your mnemonic.
       </div>
     );
   }
