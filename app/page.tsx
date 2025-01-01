@@ -8,8 +8,6 @@ export default function Home() {
         <h1 className="text-2xl font-bold mb-6">BIP39 Dotmap Converter</h1>
         <iframe
           src="https://ghbtns.com/github-btn.html?user=Umiiii&repo=onekey-keytag-converter&type=star&count=true"
-          frameBorder="0"
-          scrolling="0"
           width="150"
           height="20"
           title="GitHub"

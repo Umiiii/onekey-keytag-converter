@@ -10,6 +10,7 @@ export default function NetworkDetector() {
         await fetch('https://www.bing.com', { mode: 'no-cors' });
         setIsOnline(true);
       } catch (_error) {
+        console.log(_error);
         setIsOnline(false);
       }
     };
